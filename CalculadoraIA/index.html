@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Factura Profesional</title>
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Factura Profesional</h1>
+
+    <form id="product-form">
+      <input type="text" id="product" placeholder="Producto" required />
+      <input type="number" id="price" placeholder="Precio" step="0.01" required />
+      <input type="number" id="quantity" placeholder="Cantidad" required />
+      <button type="submit">Agregar</button>
+    </form>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Producto</th>
+          <th>Precio</th>
+          <th>Cantidad</th>
+          <th>Subtotal</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody id="invoice-body">
+      </tbody>
+    </table>
+
+    <div class="totals">
+      <p>Subtotal: <span id="subtotal">0.00</span></p>
+      <p>Descuento (5%): <span id="discount">0.00</span></p>
+      <p>IVA (19%): <span id="tax">0.00</span></p>
+      <p><strong>Total Neto: <span id="net-total">0.00</span></strong></p>
+    </div>
+
+    <button id="save-invoice">Guardar Factura</button>
+
+    <h2>Historial de Facturas</h2>
+    <ul id="history"></ul>
+  </div>
+
+  <script src="./Js/operaciones.js"></script>
+</body>
+</html>
+
